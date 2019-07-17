@@ -1,0 +1,194 @@
+/*-----------websites------------*/
+html,
+body,
+header,
+.view {
+  height: 100%;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+.view{
+  padding: 10px;
+}
+@media (max-width: 740px) {
+  html,
+  body,
+  header,
+  .view {
+    height: 1000px;
+    font-family: 'Noto Sans JP', sans-serif;
+
+  }
+}
+@media (min-width: 800px) and (max-width: 850px) {
+  html,
+  body,
+  header,
+  .view {
+    height: 600px;
+    font-family: 'Noto Sans JP', sans-serif;
+  }
+}
+
+/*----------navabar------------*/
+.navbar-brand{
+  text-align:justify;
+  word-spacing:5px;
+  color:red;
+}
+#nav-bar{
+  position: fixed;
+  top:0;
+  z-index: 10;
+}
+.navbar{
+  background-image: linear-gradient(to right,salmon,red);
+  padding:0 !important;
+}
+.navbar-nav li a{
+  color:white !important;
+}
+.fa-bars{
+  color:white;
+  font-size:30px !important;
+
+}
+
+.navbar-toggler{
+  outline: none !important;
+}
+/*-------------main---------*/
+#banner{
+  background-image: linear-gradient(to right,salmon,red);
+  padding:0 !important;
+  color:red;
+}
+.b_container{
+  height: 400px;
+}
+.home_content{
+  font-size: 15;
+  padding: 10px;
+  text-align: justify;
+  color: white;
+
+}
+.btn-outline{
+  border: 2px solid red;
+  color:white;
+}
+.btn-custom{
+  background-color:red;
+  color:white;
+}
+.bottom-img{
+  width:100%;
+  background-image: linear-gradient(to right,salmon,red);
+  height: 100px;
+}
+.fa-rocket{
+  size: 15px
+}
+/*services we provide*/
+#services{
+  padding-top: 30px;
+}
+
+.s_content{
+  margin-top: 20px;
+  padding: 10px;
+  text-align: justify;
+}
+.img_service{
+  height: 100px;
+  width:100px;
+
+}
+
+/*-----------Quote----------------*/
+.quote_image{
+  background-attachment: fixed;
+}
+.home_content{
+  font-size: 15;
+  padding: 10px;
+  text-align: justify;
+  color: black;
+
+}
+.
+/*-----------sprint_schedule-------*/
+.card_info{
+  padding: 20px;
+  font-style:"Sans-serif" ;
+  font-size: 35;
+
+}
+
+.card-img{
+  -webkit-filter: blur(10px); /* Safari 6.0 - 9.0 */
+  filter: blur(10px);
+}
+#card_info{
+  
+  color: white;
+  height: 1200px;
+}
+
+#mon{
+  background-color: salmon;
+  padding:15px;
+}
+
+#tue{
+  background-color: salmon;
+  padding:15px;
+}
+
+
+#wed{
+  background-color: salmon;
+  padding:15px;
+}
+
+
+#thu{
+  background-color: salmon;
+  padding:15px;
+}
+
+#fri{
+  background-color: salmon;
+  padding:15px;
+}
+
+
+#footer {
+  position:relative;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-image: linear-gradient(to right,salmon,red);
+  padding:0 !important;
+  color:red;
+  color: white;
+  text-align: center;
+
+}
+.up-img{
+  width:100%;
+  background-image: linear-gradient(to right,salmon,red);
+  height: 100px;
+}
+.blockquote{
+  font-family: "Times New Roman", Times, serif;
+}
+
+
+/*font-family: 'PT Sans', sans-serif;
+font-family: 'Open Sans Condensed', sans-serif;
+font-family: 'Ubuntu', sans-serif;
+font-family: 'Playfair Display', serif;
+font-family: 'Fira Sans', sans-serif;
+font-family: 'Rubik', sans-serif;
+font-family: 'Noto Sans JP', sans-serif;
+*/

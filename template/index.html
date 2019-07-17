@@ -1,0 +1,268 @@
+{% load static %}
+                
+<!doctype html>
+<html lang="en">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+      <link href="https://fonts.googleapis.com/css?family=Fira+Sans|Noto+Sans+JP|Open+Sans+Condensed:300i|PT+Sans|Playfair+Display|Rubik|Ubuntu&display=swap" rel="stylesheet">
+     	<link rel="stylesheet" type="text/css" href="{% static 'css/custom_style.css' %} ">  
+      <title>ABC</title>
+  </head>
+  <body>
+    <div id ="home-container" class="view">
+          
+
+      <!--NavBar-->
+
+          <nav class="navbar navbar-expand-md navbar navbar-light">
+            <a class="navbar-brand" href="#" target="_blank">
+              <img src="{% static 'img/abc_logo.jpg' %} " width="70" height="40" class="d-inline-block align-top" alt="abc_logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                
+      
+                  <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                      <a class="nav-link active" href="#" style="color:white;">Home</a>
+                      </li>
+                    <li class="nav-item">
+                      <a class="nav-link"href="dashboard/contest" style="color: white;">Contest</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link"href="dashboard/dash" style="color: white;">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link"href="account/faqs" style="color: white;">FAQs</a>
+                    </li>
+                    {% if cust.is_authenticated %}
+                    <li style="color:white;">Hello, {{cust.name}}</li>
+                    <li class="nav-item">
+                      <a class="nav-link"href="account/logout" style="color: white;">Logout</a>
+                    </li>
+                    { % else %}
+                    <li class="nav-item">
+                      <a class="nav-link"href="account/login" style="color: white;">Login</a>
+                    </li> 
+                    {% endif %}
+                </ul>
+
+
+            </div> 
+          </nav> 
+     
+    
+          <!--Home Front-->
+
+          <div class="container">
+                <div class="row">
+                  <h1 class="home_content">Financing India's emerging middle class & entrepreneurs</h1>
+                </div>
+                <div class="text-center">
+                  <h2 class="home_content"><small>safe and secure loans for everyone under one roof</small></h2>
+                </div>
+                <br>
+                <br>
+                <br>
+                <br>
+                <div class="row">
+                  <div class="col text-center">
+                    <a class="button login_button" type="button" href="account/login">Log in</a>
+                  </div>
+                </div>
+               <!---- <section id="login_popup">
+                         <div class="container">
+                            <div class="row" style="text-align: center;">
+                                <div class="col" >
+                                    <div class="info-form" style="display: inline-block;">
+                                        <h3 class="display-6">Log in to your account</h3><br>
+                                        <form>
+                                            <div class="form-group">
+                                               <input type="text" class="form-control" placeholder="Enter User name">
+                                               <label style="visibility: hidden;">Invalid Username</label>
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="Password" class="form-control" placeholder="Enter Password">
+                                                <label style="visibility: hidden;">Wrong Username of Password</label>
+                                            </div>
+                                            <button type="submit" class="btn btn-danger btn-lg float-left">Log in</button>
+                                            <a href="#" class="float-right" style="color: salmon; margin-top: 18px;">Forgot Password</a>     
+                                            <br>
+                                            <br>
+                                            <br>
+                                            <br>
+                                            <label style="color: gold;">Don't Have an account sign up</label>
+                                            <br>
+                                            <br>
+                                            <a href="newform.html" class="btn btn-lg btn-warning">sign Up</a>
+                                            
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+               </section>-->
+               <br>
+               <br>
+               <br>
+               <br>     
+               <!--icons top-->
+                 
+                <div class="row text-center">
+                  <div class="col-md-3"></div>
+                  <div class="col-md-2">
+                    <span class="fa-stack fa-lg">
+                            <i class="fa fa-circle fa-stack-2x" style="color:firebrick; font-size: 3em;"></i>
+                            <i class="fa fa-calendar-alt fa-stack-2x"></i>
+                    </span>
+                      <br>
+                      <br>
+                      <p class="home_content" ><strong> 10+ Years</strong><br>In Operation</p>
+                  </div>
+                  <div class="col-md-2">
+                      <span class="fa-stack fa-lg">
+                        <i class="fa fa-circle fa-stack-2x" style="color:firebrick; font-size: 3em;"></i>
+                        <i class="fas fa-landmark fa-stack-2x"></i>
+                      </span>
+                      <br>
+                      <br>
+                      <p class="home_content"><strong>100+</strong><br>Lenders</p>
+                  </div>
+                  <div class="col-md-2">
+                      <span class="fa-stack fa-lg">
+                        <i class="fa fa-circle fa-stack-2x" style="color:firebrick; font-size: 3em;"></i>
+                        <i class="fas fa-user-tie fa-stack-2x"></i>
+                      </span>
+                      <br>
+                      <br>
+                      <p class="home_content"><strong> 1M+</strong><br>Happy Customers</p>
+                  </div>
+                </div>
+           </div>
+    </div>
+    <br>
+    <br>
+    <div class="container">
+      <h2 class="text-center" style="color:firebrick;font-size: 40px">Why Us??</h2>
+      <hr>
+      <div class="row text-center">    
+          <div class="col-md-3">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x" style="color:firebrick; font-size:3em;"></i>
+                <i class="fas fa-fighter-jet fa-stack-2x"></i>
+            </span>
+            <br>
+            <br>
+            <p class="s_content"><strong>Superfast Processing</strong><br>within 72 hours</p>
+          </div>
+          <div class="col-md-3">
+             <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x" style="color:firebrick; font-size:3em;"></i>
+                <i class="fas fa-clipboard fa-stack-2x"></i></i>
+             </span>
+             <br>
+             <br>
+             <p class="s_content"><strong>No Collateral Required</strong><br>No Risk of Any Asset Loss</p>
+          </div>
+          <div class="col-md-3">
+             <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x" style="color:firebrick; font-size:3em;"></i>
+                <i class="fas fa-percent fa-stack-2x"></i>
+             </span>
+             <br>
+             <br>
+             <p class="s_content"><strong>Fair Interest Rates</strong><br>From 1.25% per month</p>
+          </div>
+          <div class="col-md-3">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x" style="color:firebrick;font-size:3em;"></i>
+                <i class="fas fa-rupee-sign fa-stack-2x"></i>
+              </span>
+              <br>
+              <br>
+              <p class="s_content"><strong>Flexible Repayments</strong><br>We Care For Your Payments</p>
+         </div>
+      </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+ 
+<!--<div class="footer">
+<img src="lwave.png" class="up-img"  >
+<div class="my-container">
+  <div class="row">
+    <div class="col-md-9">
+      <h3><b>About Us</b></h3>
+      <p class="s_content">Riidl is an incubation centre which provides nurturing environment to early based startups by providing them work space and mentoring which enables them to contribute to the community. We also create focused groups who wants to work on projects and technology based business ideas.</p>
+     <p class="s_content"><i class="fas fa-map-marker-alt"></i>     vidyavihar,Mumbai<br>
+      <i class="fas fa-phone-square-alt"></i>     07738082996<br>
+      <i class="fas fa-envelope"></i>     Write Us @ contact@riidl.org</p>
+         
+    </div>
+      <div class="col-md-3">
+        <br>
+        <br>
+        <p class="s_content align-right">
+          <i class="fas fa-print"><a href="#"></a></i><br>
+          <i class="fab fa-instagram"><a href=""></a></i><br>
+          <i class="fab fa-facebook-f"><a href=""></a></i><br>
+          <i class="fab fa-twitter"><a href=""></a></i><br>
+          <i class="fab fa-pinterest-square"><a href=""></a></i>
+        </p>
+      </div>
+  </div>
+</div>
+<hr>
+<p  class="footer_info">copyright © 2019 Mumbai,India Inc. All right reserved</p>
+</div>
+</div>-->
+
+<section id="footer">
+    <img src="lwave.png" class="up-img">
+    <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-9">
+            <h3 style="color:white;"><b>About Us</b></h3>
+                <p class="s_content" style="color:white;">Aditya Birla Finance Limited (“ABFL”) is among the leading well-diversified financial 
+                  services company in India offering end-to-end lending, financing and wealth management solutions to a diversified range of customers across the 
+                  country.<br>ABFL caters to the varied needs of diverse set of customers ranging across retail, HNI, ultra HNI, micro enterprises, SME, 
+                  mid and large corporates.<br>Aditya Birla Capital Limited (ABCL), is the financial services platform of the Aditya Birla Group.Anchored by more 
+                  than 17,000 employees, ABCL has a nationwide reach and more than 2,00,000 agents / channel partners. 
+                </p>
+                 <p class="s_content" style="color:white;">
+                    <i class="fas fa-phone-square-alt"></i>     1-800-270-7000(Within India)<br>
+                     <i class="fas fa-envelope"></i>     Write Us @ care.finance@adityabirlacapital.com</p>
+         
+          </div>
+          <div class="col-md-3">
+          <br>
+          <br>
+              <p class="s_content align-right" style="color:white;">
+              <i class="fab fa-instagram"><a href="https://www.instagram.com/adityabirlagrp/?hl=en"></a></i><br>
+              <i class="fab fa-facebook-f"><a href="https://www.facebook.com/AdityaBirlaGrp/"></a></i><br>
+              <i class="fab fa-twitter"><a href="https://twitter.com/AdityaBirlaGrp?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"></a></i><br>
+              <i class="fab fa-youtube"><a href="https://www.youtube.com/user/adityabirlagroup"></a></i>
+            </p>
+        </div>
+    </div>
+  </div>
+<hr>
+<p  class="footer_info" style="color: white;">© 2019, Aditya Birla Capital Inc. All Rights Reserved.</p>
+</section>
+
+
+  <script src="https://kit.fontawesome.com/6a00fc338b.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

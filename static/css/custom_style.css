@@ -1,0 +1,395 @@
+/*----------------------------Home page Content----------------------------------------------*/
+
+.home_content{
+	color: white;
+	padding: 10px;
+}
+.login_button{
+	border-radius: 28px;
+	border-color: firebrick;
+	align-content: center;
+}
+/*---------------------------------------home image------------------------------------*/
+#home-container{
+    background: linear-gradient(
+      rgba(205, 92, 82, 0.5), 
+      rgba(205, 92, 82, 0.5)
+    ),
+    url("../img/home_pic.jpeg"); 
+    width:100%;
+    height: 1000px;
+}
+
+/*------------------------------------------home icons----------------------------------*/
+.fa-calendar-alt{
+	color: white;
+	margin-left: 4px;
+	margin-top: 7px;
+
+}
+.fa-user-tie{
+	
+	color:white;
+	margin-top: 5px;
+	margin-left: 3px;
+}
+.fa-landmark{
+	
+	color:white;
+	margin-left: 5px;
+	margin-top: 5px;
+}
+.fa-fighter-jet{
+	color:white;
+	margin-left: 5px;
+	margin-top: 7px;
+}
+.fa-clipboard{
+	color:white;
+	margin-left: 5px;
+	margin-top: 7px;
+}
+
+.fa-percent{
+	color:white;
+	margin-left: 5px;
+	margin-top: 7px;
+}
+
+.fa-rupee-sign{
+	color:white;
+	margin-left: 5px;
+	margin-top: 7px;
+}
+
+.fa-user-alt{
+	margin-left: 5px;
+	margin-top: 5px;
+}
+.home_content{
+  font-size: 15;
+  padding: 10px;
+  text-align: justify;
+  color: white;
+
+}
+.s_content{
+  margin-top: 20px;
+  padding: 10px;
+  text-align: justify;
+	margin-left: 10px;
+	margin-top: 5px;
+}
+.fa-user-alt{
+  margin-top: 20px;
+  margin-left: 15px;
+}
+
+#footer {
+	position:relative;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	background-color:firebrick;
+	padding:0 !important;
+	text-align: center;
+  
+  
+  }
+  .up-img{
+	width:100%;
+	background-color:firebrick;
+  }
+  .conatiner-fluid{
+	  background-color: firebrick;
+	  text-align:center;
+  }
+  .s_content{
+	margin-top: 20px;
+	padding: 10px;
+	text-align: justify;
+	  margin-left: 10px;
+	  margin-top: 5px;
+  }
+  
+/*-----------------------------------Login page--------------------------------------*/
+
+
+
+
+/*------------------------------------Login image-------------------------------------*/
+#Login-container{
+
+	background: linear-gradient(
+      rgba(225, 40, 10, 0.5), 
+      rgba(255, 40, 10, 0.5)
+    ),
+    url("../img/sign-up_bg.jpg"); 
+    width:100%;
+	height: 700px;
+}
+/*-----------------------------------Login Section-----------------------------------*/
+#login{
+	color:white;
+	padding:20px;
+	background: linear-gradient( rgba(210, 105,10, 0.7), 
+      rgba(210, 105, 10, 0.7)
+    );
+    align-content: center;
+	width: 40%;
+}
+#login_form{
+	align-items: center;
+}
+/*-----------Login Button-------------------*/
+.button{
+	background-color:firebrick;
+	color:white;
+	text-align:center;
+	font-size: 16px;
+	padding: 20px;
+
+}
+/*--------------------------------footer-------------------------------*/
+
+/*----------------------------------User_dashboard----------------------------------------*/
+
+.animate1{
+	width: 100%;
+
+}
+/*welcome monkey*/
+.msg_content{
+	margin-top:93px;
+	margin-left: 450px;
+	font-size: 30px;
+	color:firebrick;
+	font-style: italic;
+	
+}
+#wlc_img{
+	margin-left:350px;
+}
+#wlc_img2{
+	margin-left:350px;
+}
+#wlc_img3{
+	margin-left:350px;
+}
+
+/*----------Dashboar---------------------*/
+
+
+#user_name{
+	font-size: 30px;
+	color:firebrick;
+	padding: 10px;
+}
+#user_loan{
+	font-size: 28px;
+	font-style: italic;
+	color: crimson;
+	padding: 10px;
+
+}
+#user_due{
+	font-size: 25px;
+	float: right;
+	color: indianred;
+	padding: 10px;
+}
+#user_points{
+	font-size: 25px;
+	float: right;
+	color:goldenrod;
+	padding: 10px;
+}
+#user_pay{
+	font-size: 25px;
+	float:right;
+	color:red;
+	padding: 10px;
+}
+
+
+/*----------Theme section-----------------*/
+#theme{
+	background: linear-gradient(
+      rgba(255, 255, 255, 0.1), 
+      rgba(255, 255, 255, 0.1)
+    ),
+    url("../img/anim4.png"); 
+    width:100%;
+    height: 500px;
+    position: relative;
+    background-repeat: repeat;
+}
+.global_cont{
+
+	font-size: 30px;
+	color:firebrick;
+	font-style: italic;
+	padding: 10px;
+	margin-top: 90px;
+	margin-left: 20px;
+}
+
+#tide{
+	bottom: 0;
+	width: 100%;
+	position: absolute;
+	height: 20px;
+}
+/*contest_redirect*/
+#contest_redirect{
+
+	background: linear-gradient(
+      rgba(255, 255, 255, 0.1), 
+      rgba(255, 255, 255, 0.1)
+    ),
+    url("../img/underwater3.jpg"); 
+    width:100%;
+    height: 500px;
+    background-repeat: no-repeat;
+    
+}
+#click_contest{
+	margin-top: 240px;
+	margin-left: 550px;
+}
+/*--------------------------------contest------------------------------*/
+
+
+/*---------------------------------navbar------------------------------*/
+#nav-bar{
+	background-image: linear-gradient(to right,firebrick,red);
+}
+#trees{
+	background-color: white;
+
+}
+#cash_monkey{
+	position: absolute;
+	margin-left: 500px;
+	margin-top: 80px;
+
+}
+#tree_monkey1{
+	position: absolute;
+	margin-left: 650px;
+	margin-top: 150px;
+}
+
+ .tree1{
+  	margin-left:700px;
+  	margin-top:150px;
+	position: absolute;
+  }
+  .inst1{
+  	margin-left:800px;
+  	margin-top:140px;
+  	color: firebrick;
+  	font-size: 20px;
+  	position: absolute;
+  }
+  .tree2{
+
+  	margin-left:200px;
+  	margin-top:450px;
+  	position: absolute;
+
+  }
+  .inst2{
+  	
+  	margin-left:100px;
+  	margin-top:420px;
+  	color: firebrick;
+  	font-size: 20px;
+  	position: absolute;
+  }
+  .tree3{
+  	margin-left:700px;
+  	margin-top:750px;
+  	position: absolute;
+  }
+  .inst3{
+
+	margin-left: 790px;
+	margin-top:670px;
+  	color: firebrick;
+  	font-size: 20px;
+  	position: absolute;
+  }
+  .tree4{
+  	margin-left:180px;
+  	margin-top:1050px;
+  	position: absolute;
+  }
+  .inst4{
+  	margin-left: 100px;
+  	margin-top:990px; 
+  	color: firebrick;
+  	font-size: 20px;
+  	position: absolute;
+  }
+
+#past_post{
+	margin-top: 1200px;
+}
+.april{
+	margin-top: 20px;
+	margin-left: 200px;
+}
+.may{
+	margin-left: 70px;
+}
+.may_image{
+	margin-left: 130px;
+}
+.june{
+	margin-left: 200px;
+	position: absolute;
+}
+.p_month1{
+	font-size:40px; 
+	color: teal;
+}
+.p_head1{
+	font-size: 30px;
+	color:aqua;
+}
+.p_winner1{
+	font-size: 25px;
+	color:aqua;
+}
+.p_month2{
+	font-size:40px; 
+	color: goldenrod;
+}
+.p_head2{
+	font-size: 30px;
+	color:gold;
+}
+.p_winner2{
+	font-size: 25px;
+	color:gold
+}
+.p_month3{
+	font-size:40px; 
+	color: orange;
+}
+.p_head3{
+	font-size: 30px;
+	color:darkorange;
+}
+.p_winner3{
+	font-size: 25px;
+	color:darkorange;
+}
+
+
+
+
+
+
+  

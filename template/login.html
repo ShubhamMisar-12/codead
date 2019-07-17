@@ -1,0 +1,111 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+      <link href="https://fonts.googleapis.com/css?family=Fira+Sans|Noto+Sans+JP|Open+Sans+Condensed:300i|PT+Sans|Playfair+Display|Rubik|Ubuntu&display=swap" rel="stylesheet">
+      <link rel="stylesheet" type="text/css" href="{% static 'css/custom_style.css' %}">  
+    <title>ABC</title>
+  </head>
+  <body>
+
+
+
+   
+    <!--NavBar-->
+   
+   
+    <div id ="Login-container" class="view">
+          <nav class="navbar navbar-expand-md navbar navbar-light">
+            <a class="navbar-brand" href="#" target="_blank">
+              <img src="{% static 'img/abc_logo.jpg' %}" width="70" height="40" class="d-inline-block align-top" alt="abc_logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                  <a class="nav-link active" href="/" style="color:white;">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link"href="contest" style="color: white;">Contest</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link"href="faqs" style="color: white;">FAQs</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link"href="dash" style="color: white;">Dashboard</a>
+                </li>  
+             </ul>
+            </div> 
+          </nav> 
+     
+      
+    
+            <!--Login-->             
+            
+            
+            
+            <div class="container">
+              <br>
+              <br>
+              <div class="row" style="text-align: center;">
+                <div class="col" >
+                  <form id="login" action="login" method = 'post'class="text-center" style="display: inline-block;">
+                        {% csrf_token %} 
+                        <h4 ><u>Log In</u></h4><br>
+                          <div class="form-group">
+                            <input type="text" class="form-control" name="username" placeholder="Enter User name">
+                            <label style="visibility: hidden;">Invalid Username</label>
+                         </div>
+                         <div class="form-group">
+                             <input type="Password" class="form-control"name="password" placeholder="Enter Password">
+                             <label style="visibility: hidden;">Wrong Username of Password</label>
+                         </div>
+                         <button type="submit" class="btn btn-danger btn-lg float-left">Log in</button>
+                         <a href="index.html" class="float-right" style="color:yellow; margin-top: 18px;">Back</a>    
+                  </form> 
+                </div>
+              </div>
+            </div>
+                          <!--<div class="form-group">
+                            <input value="" type="name" class="form-control" id="InputName" placeholder ="Enter Full Name" >
+                            <label style="visibility: hidden;">Invalid Name</label>
+                          </div>
+                          <div class="form-group">
+                              <input type="password" class="form-control" id="InputPassword1" placeholder="Enter Password">
+                              <label id="InputPassword1" style="visibility: hidden;">Password too short</label>
+                          </div>
+                          <div class="form-group">
+                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Confirm Password">
+                            <label  id="InputPassword1" style="visibility: hidden;">Passwords do not match</label>
+                          </div>
+                          <div class="row">
+                            <div class="col-md-4">
+                              <div class="form-group" style="margin-left: 10px">
+                                    <select class="form-control float-left" >
+                                          <option value="Female">Female</option>
+                                          <option value="Male">Male</option>
+                                          <option value="Other">Other</option>
+                                     </select>
+                              </div>
+                            </div>
+                            <div class="col-md-5" style="margin-left: 60px;">
+                               <input type="text" class="form-control" placeholder="Enter Username">
+                               <label style="visibility: hidden;">wrong username</label>                            
+                            </div>
+                         </div>
+                          <button type="submit" class="btn btn-success btn-lg float-left" >Submit</button>
+                          <a href="Aditya.html" class="btn btn-info btn-lg float-right">Go Back</a>
+                  </form>-->
+    </div>
+      <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+      <script src="https://kit.fontawesome.com/6a00fc338b.js"></script>
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+   </body>
+</html>

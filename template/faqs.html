@@ -1,0 +1,550 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/custom_style.css">
+  <link href="https://fonts.googleapis.com/css?family=Fira+Sans|Noto+Sans+JP|Open+Sans+Condensed:300i|PT+Sans|Playfair+Display|Rubik|Ubuntu&display=swap" rel="stylesheet">
+  <title>FAQ</title>
+
+  </head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+(function (i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r;
+    i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date();
+    a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+    a.async = 1;
+    a.src = g;
+    m.parentNode.insertBefore(a, m)
+})(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+
+//use trigger click to call the parent class
+
+$(document).ready(function (e) {
+
+    $(".tab_in_sec .panel-default>.panel-heading a").click(function () {
+        if ($(this).is('.active')) {
+            $(this).removeClass("active");
+        } else {
+            $(".tab_in_sec .panel-default>.panel-heading a.active").removeClass("active");
+            $(this).addClass("active");
+        }
+    });
+
+    $('.aa').on('click', function () {
+        $('#headingOne a').trigger('click');
+    });
+
+    $('.bb').on('click', function () {
+        $('#headingTwo a').trigger('click');
+    });
+
+    $('.cc').on('click', function () {
+        $('#headingThree a').trigger('click');
+    });
+
+    $('#headingOne').on('click', function () {
+        $('.aa').addClass('actives').parent('li').siblings('li').find('a').removeClass('actives');
+    });
+
+    $('#headingTwo').on('click', function () {
+        $('.bb').addClass('actives').parent('li').siblings('li').find('a').removeClass('actives');
+    });
+
+    $('#headingThree').on('click', function () {
+        $('.cc').addClass('actives').parent('li').siblings('li').find('a').removeClass('actives');
+    });
+
+
+    $('.tab_first .panel-heading ul li a[data-toggle="collapse"]').on('click', function () {
+        $('.tab_first .panel-heading ul li a[data-toggle="collapse"]').removeClass('actives');
+        $(this).addClass('actives');
+    });
+
+
+    $('.palceholder').click(function () {
+        $(this).siblings('input').focus();
+    });
+    $('.form-control').focus(function () {
+        $(this).siblings('.palceholder').hide();
+    });
+    $('.form-control').blur(function () {
+        var $this = $(this);
+        if ($this.val().length == 0)
+            $(this).siblings('.palceholder').show();
+    });
+    $('.form-control').blur();
+
+
+    $('.tab_first .panel-heading ul li a[href^="#"]').on('click', function (event) {
+        var target = $(this.getAttribute('href'));
+
+        if (target.length) {
+            event.preventDefault();
+            $('html, body').stop().animate({
+                scrollTop: target.offset().top - 70
+            }, 1000);
+        }
+
+    });
+
+});
+</script>
+<style>
+    body {
+    font-family: 'Calibri', 'TimesNewRomanPSMT';
+    font-size: 14px;
+    overflow-x: hidden !important;
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+    background: #fff;
+}
+
+a {
+    color: #658ad0;
+    transition: all 0.5s ease;
+}
+
+a:hover {
+    color: #3e6cc4;
+    text-decoration: none;
+}
+
+a:active {
+    outline: none;
+    text-decoration: none;
+}
+
+a:focus {
+    outline: none;
+    text-decoration: none;
+}
+
+button:focus {
+    outline: none;
+    text-decoration: none;
+}
+
+img {
+    line-height: 0;
+    transition: all 0.5s ease;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    text-align: center;
+    font-size: 30px;
+    text-transform: uppercase;
+    color: #353535;
+    margin-bottom: 20px;
+}
+
+ul,
+ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.clear {
+    clear: both;
+    content: '';
+    display: block;
+    width: 100%;
+}
+
+.clear:after {
+    clear: both;
+    content: '';
+    display: block;
+    width: 100%;
+}
+
+.form-control:focus {
+    border-color: #3b0600;
+    outline: none;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.center {
+    text-align: center;
+}
+
+body {}
+
+/*@font-face {
+    font-family: 'Calibri';
+    src: url('../fonts/Calibri.eot') format('woff'), url('../fonts/Calibri.ttf') format('truetype'), url('../fonts/Calibri.svg#Calibri') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Calibri-Bold';
+    src: url('../fonts/Calibri-Bold.eot') format('woff'), url('../fonts/Calibri-Bold.ttf') format('truetype'), url('../fonts/Calibri-Bold.svg#Calibri-Bold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TimesNewRomanPS-BoldMT';
+    src: url('../fonts/TimesNewRomanPS-BoldMT.eot') format('woff'), url('../fonts/TimesNewRomanPS-BoldMT.ttf') format('truetype'), url('../fonts/TimesNewRomanPS-BoldMT.svg#TimesNewRomanPS-BoldMT') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TimesNewRomanPSMT';
+    src: url('../fonts/TimesNewRomanPSMT.eot') format('woff'), url('../fonts/TimesNewRomanPSMT.ttf') format('truetype'), url('../fonts/TimesNewRomanPSMT.svg#TimesNewRomanPSMT') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}*/
+
+.tab_sec {
+    background:linear-gradient( rgba(205, 92, 82, 0.5), 
+      rgba(205, 92, 82, 0.5)
+    ), url("{ % static 'img/money.jpg' %}");
+    /*background: #f2f1f1 url('money.jpg')no-repeat center top;*/
+    padding: 85px 0px 50px 0;
+    min-height: 650px;
+    background-size:100%;
+}
+
+.tab_in_sec {
+    max-width: 775px;
+    width: 100%;
+    margin:66px auto;
+}
+
+.tab_in_sec .panel-default>.panel-heading {
+    padding: 0;
+}
+
+.tab_in_sec .panel-default>.panel-heading a {
+    display: block;
+    padding: 20px 15px;
+    font-size: 17px;
+    color: #4f4f4f;
+    text-transform: uppercase;
+    background: #fff;
+    border: solid 1px #ccc;
+    margin:10px 0;
+}
+
+.collapse.in {}
+
+.panel {
+    background: none;
+    border: none;
+}
+
+.panel-body {
+    background: #fff;
+    margin-top: 7px;
+    border: solid 1px #ccc;
+    padding: 40px 35px 25px 35px;
+}
+
+.tab_in_sec h2 {
+    color: #228697;
+    font-family: 'TimesNewRomanPS-BoldMT';
+    text-transform: inherit;
+    position: relative;
+    margin: 0 25px 35px 25px;
+}
+
+.in++.panel-title {
+    color: #228697;
+}
+
+.tab_in_sec h2 span {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    height: 1px;
+    display: block;
+    width: 100%;
+    background: #228697;
+    z-index: 0;
+}
+
+.tab_in_sec h2 strong {
+    display: inline-block;
+    background: #f2f1f1;
+    position: relative;
+    z-index: 1;
+    padding: 10px 15px;
+    font-family: raleway;
+    border-radius: 15px;
+    box-shadow: inset 1px 1px 1px 0px #000;
+    border: 5px solid #d82029;
+    color: #000;
+    font-size: 27px;
+    font-weight: bold;
+}
+
+
+.tab_in_sec .panel-default>.panel-heading a {
+    background:#000;
+    color:#fff;
+}
+
+.tab_in_sec .panel-default>.panel-heading a.active {
+    background:#000;
+    color: #f00;
+}
+
+.tab_first {
+    background: none;
+    position: absolute;
+    top: 66px;
+    left: 320px;
+    width: 100%;
+}
+
+.tab_first .panel-heading {
+    background: none;
+    border-bottom: none;
+    box-shadow: none;
+    padding: 0px;
+}
+
+.tab_first .panel-heading {}
+
+.tab_sec {
+    position: relative;
+}
+
+.tab_first .panel-heading ul li {
+    display: inline-block;
+    text-align: center;
+}
+
+.tab_first .panel-heading ul li a {
+    padding: 15px 35px;
+    font-weight: bold;
+    background: #fff;
+    color: #000000;
+    text-transform: uppercase;
+}
+
+.tab_first .panel-primary {
+    box-shadow: none;
+    padding-left: 30px;
+}
+
+.actives {
+    background: #d82028 !important;
+    color: #fff !important;
+}
+
+.panel-body p {
+    margin-bottom: 15px;
+}
+@media (min-width:1681px) and (max-width:1920px){
+   .tab_first {
+    left: 600px;
+} 
+}
+@media (min-width:1599px) and (max-width:1680px){
+   .tab_first {
+    left: 476px;
+} 
+}
+@media (min-width:1439px) and (max-width:1600px){
+   .tab_first {
+    left:430px;
+} 
+}
+@media (min-width:1367px) and (max-width:1440px){
+   .tab_first {
+    left:342px;
+} 
+}
+@media only screen and (max-width:1280px){
+   .tab_first {
+    left: 270px;
+} 
+}
+@media only screen and (max-width:1024px){
+   .tab_first {
+    left: 135px;
+} 
+}
+
+@media only screen and (max-width: 992px) {
+    .tab_first .panel-primary {
+        padding-left: 0px;
+    }
+    .tab_first .panel-heading ul li a {
+        padding: 12px 20px;
+    }
+    .tab_first {
+        top: -38px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .tab_first {
+        display: none;
+    }
+    .top_appy {
+        width: 192px;
+        margin-top: 5px;
+        position: relative;
+        z-index: 101;
+        float: none;
+        margin: 5px auto 0 auto;
+    }
+    .top_appy a {
+        height: 30px;
+        line-height: 30px;
+        font-size: 12px;
+    }
+    .tab_sec {
+        background: none;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .top_appy {
+        margin-top: 0px;
+    }
+    .tab_in_sec h2 span {
+        display: none;
+    }
+    .tab_in_sec h2 strong {
+        background: none;
+    }
+    .tab_sec {
+        padding: 25px 0 25px 0px;
+    }
+    .tab_in_sec h2 {
+        margin: 0px;
+        margin-bottom: 15px;
+    }
+}
+</style>
+<body>
+    <!-- main site wrapper -->
+    <div class="site_wrapper">
+
+        <!-- content sec -->
+        <div class="content_sec">
+        
+            <!-- launch -->
+            <section class="tab_sec" id="tab-sec">
+                <div class="container-fluid tab_first">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="panel panel-primary">
+                                <div class="panel-heading">
+                                    <ul class="nav panel-tabs">
+                                        <li><a class="aa actives" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne" onclick="ga('send', 'event', 'Button', 'Click', 'Program Overview', 1);">Contest Overview</a></li>
+                                        <li><a class="collapsed bb" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" onclick="ga('send', 'event', 'Button', 'Click', 'Program Eligibility', 1);" >Rewards</a></li>
+                                        <li><a class="collapsed cc" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree" onclick="ga('send', 'event', 'Button', 'Click', 'Why NMIMS', 1);" ></a>Redeem Points</li>                            
+                                    </ul>                 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="tab_in_sec">
+                                <h2><span></span><strong>FREQUENTLY ASKED QUESTIONS.</strong></h2>
+                                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                                  <div class="panel panel-default">
+                                    <div class="panel-heading" role="tab" id="headingOne">
+                                      <h4 class="panel-title">
+                                        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne" class="active" onclick="ga('send', 'event', 'Button', 'Click', 'Program Overview', 1);">
+                                           Contest Overview
+                                        </a>
+                                      </h4>
+                                    </div>
+                                    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                                      <div class="panel-body">
+                                        <p>All you need to do is check the theme of this month,make a post of it,tag us,earn points and the one who made the best post will be rewarded with exciting prizes. </p>                              
+                                        
+                                    </div>
+                                    </div>
+                                  </div>
+                                  <div class="panel panel-default">
+                                    <div class="panel-heading" role="tab" id="headingTwo">
+                                      <h4 class="panel-title">
+                                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" onclick="ga('send', 'event', 'Button', 'Click', 'Program Eligibility', 1);">
+                                            Reward
+                                        </a>
+                                      </h4>
+                                    </div>
+                                    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                                        <div class="panel-body">
+                                            <p>
+                                                Rewards are completely based on post,you will definately earn points for your posts,but the points(rewards) will vary from post to post,stay tuned for more exciting rewards.Winners will be declared at the end of every month.
+                                            </p>
+                                             </div>
+                                    </div>
+                                  </div>
+                                  <div class="panel panel-default">
+                                    <div class="panel-heading" role="tab" id="headingThree">
+                                      <h4 class="panel-title">
+                                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree" onclick="ga('send', 'event', 'Button', 'Click', 'Why NMIMS', 1);">
+                                         Redeem Points
+                                        </a>
+                                      </h4>
+                                    </div>
+                                    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                                      <div class="panel-body">
+                                        <p>You will be benefited by these points into pantaloons,various insurances,etc.Your points will be rewarded in a day or two,and in case if you are the winner it will take couple of days for larger reward..</p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+                
+            
+        </div>
+        <!-- End content sec -->
+
+            
+    </div>
+    <!-- end site wrapper -->
+<script src="https://kit.fontawesome.com/6a00fc338b.js"></script>
+   <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
+
+
+

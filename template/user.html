@@ -1,0 +1,136 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Fira+Sans|Noto+Sans+JP|Open+Sans+Condensed:300i|PT+Sans|Playfair+Display|Rubik|Ubuntu&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/custom_style.css' %} ">
+    	 <title>ABC</title>
+  </head>
+  <body>
+      <section id="nav-bar">
+          <nav class="navbar navbar-expand-md navbar navbar-light">
+               <a class="navbar-brand" href="#" target="_blank">
+                 <img src="{% static 'img/abc_logo.jpg' %}" width="70" height="40" class="d-inline-block align-top" alt="abc_logo">
+               </a>
+               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                 <span class="navbar-toggler-icon"></span>
+               </button>
+               <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                 <ul class="navbar-nav ml-auto">
+                   <li class="nav-item">
+                     <a class="nav-link active" href="/" style="color:white;">Home</a>
+                   </li>
+                   <li class="nav-item">
+                     <a class="nav-link"href="contest" style="color: white;">Contest</a>
+                   </li>
+                   <li class="nav-item">
+                     <a class="nav-link"href="faqs" style="color: white;">FAQs</a>
+                   </li>  
+                </ul>
+               </div> 
+             </nav> 
+     </section>
+
+    <div class="container" > 
+      <div class="wlc_msg">
+          <div id="msg1">
+            <p  class="msg_content">Hi There!!<br>Welcome
+            </p>
+          </div>
+          <div id="msg2">
+            <p class="msg_content">I am<br>Money Monkey  
+            </p>
+          </div>
+          <div id="msg3">
+            <p class="msg_content">I can help<br>you make money</p>
+          </div>
+          <div id="msg4">
+            <p class="msg_content">Scroll down<br>to learn more</p>
+          </div>
+
+      </div>
+      <div class="Monkey_wlcome">
+        
+        <img src="{% static 'img/wlc_mnk3.png' %}" alt="monkey_img" id="wlc_img"style="width: 150px; height: 200px">
+        <img src="{% static 'img/wlc_mnk2.png' %}" alt="monkey_img" id="wlc_img2" style="width: 150px; height: 200px">
+        <img src="{% static 'img/wlc_mnk3.png' %}" alt="monkey_img" id="wlc_img3" style="width: 150px; height: 200px">        
+
+
+      </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <section id="user">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <img src="{% static 'img/ln_car.jpg' %}" alt="loan_type">
+          </div>
+          <div class="col-md-6">
+  
+            <p id="user_name"><i class="fas fa-user"></i>Virat</p><br>
+            <p id="user_loan"><i class="fas fa-wallet"></i>Car Loan</p><br><br><hr>
+          </div>
+        </div>
+          <div class="row">
+              <div class="col-md-3"></div>
+              <div class="col-md-2">
+                <p id = "user_points">Points</p>
+                <p id="user_points"><i class="fas fa-coins"></i>200</p>
+              </div>
+              <div class="col-md-2">
+                <p id="user_pay">paid</p>
+                <p id="user_pay"><i class="fas fa-check-circle"></i></p>
+              </div>
+              <div class="col-md-2"> 
+                <p id="user_due">Due Date</p>
+                <p id="user_due">25th</i></p>
+              </div>
+          </div> 
+        </div>
+    </section>    <br>
+    <br>
+    <br>
+    <br>
+    <div id="theme">
+        <img src="{% static 'img/tide12.png' %}" id="tide">
+        <div id="global_msg1">
+          <p class="global_cont">Global warming has emerged<br>as one of the most important<br>environmental issues ever to<br>confront humanity. 
+          </p>
+        </div>
+        <div id="global_msg2">
+          <p class="global_cont">
+            Global warming will have major<br>impact on Asia and India<br> is at high risk amongst<br>the Asian countries.
+          </p>
+        </div>
+        <div id="global_msg3">
+          <p class="global_cont">What could we do????
+          </p>
+        </div>
+        <div id="global_msg4">
+          <p class="global_cont">Create an impact<br>and tag us<br>Earn reward
+        </p>
+        </div>
+    </div>
+    <div id="contest_redirect">
+        <a id="click_contest" href="contest" target="_blank" class="btn btn-lg btn-primary">Click Here</a>  
+    </div>
+
+        <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+        <script type="text/javascript" src="{%  static 'js/abcjs.js' %}"></script>
+        <script src="https://kit.fontawesome.com/6a00fc338b.js"></script>
+      <!--  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="abcjs.js"></script>
+        </body>
+</html>
+
+
